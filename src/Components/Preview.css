@@ -1,0 +1,33 @@
+.data-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.data-head h4{
+    color: black;
+}
+
+.data-head button{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    margin-bottom: 5px;
+    max-width: 200px;
+    border-radius: 3px;
+}
+
+.data-head button:hover{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .data-head{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

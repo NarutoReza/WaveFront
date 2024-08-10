@@ -1,0 +1,51 @@
+.main-box h6{
+    color: rgb(200, 127, 133);
+}
+
+.main-box h3{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.main-box .text{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-box .text p{
+    font-family: "Ubuntu", sans-serif;
+    text-align: justify;
+}
+
+.main-box .text .btn button{
+    width: 120px;
+    /* background-color: rgb(254, 153, 120); */
+    background-image: linear-gradient(270deg, rgb(254, 153, 120), rgb(255, 117, 71));
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: white;
+}
+
+.main-box .text .btn button:hover{
+    background-image: linear-gradient(90deg, rgb(254, 153, 120), rgb(255, 117, 71));
+}
+
+.boxes-col img{
+    width: 100%;
+}
+
+.boxes-col p{
+    margin-top: -60px;
+    z-index: 1;
+    background-color: black;
+    text-align: center;
+}
+
+@media screen and (max-width: 575px) {
+    .main-box .text{
+        display: flex;
+        flex-direction: column;
+    }
+}
