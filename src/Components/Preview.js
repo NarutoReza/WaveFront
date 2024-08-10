@@ -17,7 +17,7 @@ function Preview() {
     
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/single-data/${params.postId}`)
+            .get(`${process.env.REACT_APP_BACKEND_URL}/single-data/${params.postId}`)
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, [params])
@@ -27,11 +27,11 @@ function Preview() {
             data && data ? <React.Fragment>
                 <div className='data-head'>
                     <h4>This is a Preview Page</h4>
-                    {/* <Link to={`http://localhost:8080/files/${data.name}.html`} target='_blank' download>Download the Page</Link> */}
-                    <button onClick={e => { e.preventDefault(); download(`http://localhost:8080/files/${data.name}.html`, `${data.name}.html`) }}>Download the Page</button>
+                    {/* <Link to={`${process.env.REACT_APP_BACKEND_URL}/files/${data.name}.html`} target='_blank' download>Download the Page</Link> */}
+                    <button onClick={e => { e.preventDefault(); download(`${process.env.REACT_APP_BACKEND_URL}/files/${data.name}.html`, `${data.name}.html`) }}>Download the Page</button>
                 </div>
 
-                <iframe src={`http://localhost:8080/files/${data.name}.html`} width={'100%'} height={'1000px'}></iframe>
+                <iframe src={`${process.env.REACT_APP_BACKEND_URL}/files/${data.name}.html`} width={'100%'} height={'1000px'}></iframe>
             </React.Fragment> : <h4>Data Error</h4>
         }
     </>

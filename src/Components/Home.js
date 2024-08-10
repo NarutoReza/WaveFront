@@ -12,7 +12,7 @@ function Home() {
     
     useEffect(() => {
         axios
-            .get('http://localhost:8080/data')
+            .get(`${process.env.REACT_APP_BACKEND_URL}/data`)
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, [])
